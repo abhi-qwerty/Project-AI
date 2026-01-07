@@ -1,6 +1,6 @@
 # Rock–Paper–Scissors–Plus — AI Referee Chatbot
 
-This project implements a **minimal Rock–Paper–Scissors–Plus game referee** using the **Google ADK framework**. The agent validates moves, tracks game state, enforces rules, and responds conversationally while the user plays against the bot. **Run Without using any Gemini API Key**
+This project implements a **minimal Rock–Paper–Scissors–Plus game referee** using the **Google ADK framework**. The agent validates moves, tracks game state, enforces rules, and responds conversationally while the user plays against the bot. **Runs Without using any Gemini API Key**
 
 ## 🎮 Game Rules
 
@@ -58,7 +58,7 @@ Tools are explicit ADK-style utilities that perform state mutation and validatio
     * Prints rules (concise, ≤ 5 lines).
     * Loops for user input.
     * Ends automatically.
-    * *Constraint:* No web APIs, databases, servers, or UI frameworks.
+    * No web APIs, databases, servers, or UI frameworks.
 
 ---
 
