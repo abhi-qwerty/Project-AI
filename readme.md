@@ -1,6 +1,6 @@
 # Rock–Paper–Scissors–Plus — AI Referee Chatbot
 
-This project implements a **minimal Rock–Paper–Scissors–Plus game referee** using the **Google ADK framework**. The agent validates moves, tracks game state, enforces rules, and responds conversationally while the user plays against the bot.
+This project implements a **minimal Rock–Paper–Scissors–Plus game referee** using the **Google ADK framework**. The agent validates moves, tracks game state, enforces rules, and responds conversationally while the user plays against the bot. **Run Without using any Gemini API Key**
 
 ## 🎮 Game Rules
 
@@ -62,7 +62,7 @@ Tools are explicit ADK-style utilities that perform state mutation and validatio
 
 ---
 
-## ✅ Why This Meets Requirements
+## ✅ What This Meets 
 
 - [x] **Best‑of‑3 enforced**
 - [x] **Bomb only once per player**
@@ -74,29 +74,34 @@ Tools are explicit ADK-style utilities that perform state mutation and validatio
 - [x] **Clean separation** of intent, logic, and response formatting
 - [x] **Uses Google ADK agents + tools**
 - [x] **No external APIs or databases**
+- [x] **No gemini API Key required**
 
 ---
 
-## ⚖️ Tradeoffs & Future Improvements
+## 🏗 Project Structure
 
-**Tradeoffs Made:**
-* Simple random bot (not strategic).
-* In‑memory session service only (no database).
-* CLI instead of chat UI (per constraints).
-
-**Future Improvements:**
-* Add configurable game length.
-* Improve bot strategy.
-* Add test coverage.
-* Support restarting games gracefully.
-* Persist history across sessions.
+```text
+rps_plus_adk/
+├── main.py
+├── agent/
+│   └── adk_game_agent.py
+├── services/
+│   └── state_service.py
+├── schemas/
+│   └── game_state_schema.py
+├── tools/
+│   ├── validate_move.py
+│   └── resolve_round.py
+└── README.md
 
 ---
 
 ## ▶️ How to Run
 
 1.  Clone the repository.
+2.  Install google-adk.
 2.  Run the main script:
 
 ```bash
+pip install google-adk
 python main.py
